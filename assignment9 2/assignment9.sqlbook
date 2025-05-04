@@ -1,0 +1,84 @@
+-- SQLBook: Markup
+# Assignment 9
+-- SQLBook: Markup
+## Submit as a `.sqlbook`
+-- SQLBook: Markup
+### Write your name (double click this cell):
+-- SQLBook: Markup
+<font size = "5">
+
+Delete existing table if it exists (run the line of code below)
+-- SQLBook: Code
+DROP TABLE IF EXISTS movies;
+-- SQLBook: Markup
+### a) Part 1: Creating Tables
+
+Create a database table for tracking movies. Create a table called movies with the following columns:
+
+- `movie_id` (integer)
+- `title` (variable character string, maximum 50 characters)
+- `director` (variable character string, maximum 30 characters)
+- `release_year` (integer)
+- `rating` (decimal number)
+-- SQLBook: Code
+
+
+
+-- SQLBook: Markup
+### a) Part 2: Adding rows to the table
+Now we need to add movies to the table. Insert the movies given below into the table (the variables are already given in corresponding order):
+- 1, 'The Shawshank Redemption', 'Frank Darabont', 1994, 9.3
+- 2, 'Parasite', 'Bong Joon-ho', 2019, 8.5
+- 3, 'The Dark Knight', 'Christopher Nolan', 2008, 9.0
+- 4, 'Everything Everywhere All at Once', 'Daniel Kwan', 2022, 7.8
+- 5, 'Pulp Fiction', 'Quentin Tarantino', 1994, 8.9
+
+HINT: Use ```INSERT INTO```
+-- SQLBook: Code
+
+-- SQLBook: Markup
+### b) Querying
+Using the movies table you created in Problem 1:
+- Write a query to select all movies released after 2010.
+- Write a query to find all movies directed by a specific director (choose one from your inserted data).
+- Write a query that returns only the title and release_year columns, sorted by release year in ascending order.
+-- SQLBook: Code
+
+-- SQLBook: Markup
+### c) Aggregation
+Add some these movies to your movies table and then write queries to:
+- (6, 'The Godfather', 'Francis Ford Coppola', 1972, 9.2),
+- (7, 'Inception', 'Christopher Nolan', 2010, 8.8),
+- (8, 'Dune', 'Denis Villeneuve', 2021, 8.0),
+- (9, 'Oppenheimer', 'Christopher Nolan', 2023, 8.4)<br> <br>
+
+- Count how many movies were released in each decade (2000s, 2010s, 2020s, etc.) and display the results.
+- HINT: Use FLOOR and COUNT, then use GROUP BY and ORDER BY
+-- SQLBook: Code
+
+-- SQLBook: Markup
+### d) Filtering
+- Find all movies with a rating above 8.0 AND released before 2015.
+- Find movies directed by Christopher Nolan.
+- Select the titles of the top 3 highest-rated movies.
+-- SQLBook: Code
+
+-- SQLBook: Markup
+### e) Updating and deleting records
+
+Carry out two separate operations:
+
+(1) Update the rating of a movie (changing The Shawshank Redemption's rating to 9.5 using SET)
+
+(2) Delete a movie from the table (removing Pulp Fiction by its movie_id)
+
+HINT: Research how UPDATE and DELETE work online. You can use the following link:
+
+https://www.postgresql.org/docs/current/sql-commands.html
+
+Learn more about the SET command here:
+
+https://www.w3schools.com/sql/sql_ref_set.asp
+-- SQLBook: Code
+
+
